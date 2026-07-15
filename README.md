@@ -6,15 +6,15 @@ UniVault is a modern academic resource-sharing platform designed to help univers
 
 ## Features
 
-- 📚 Past exam repository
-- 📝 TPC/assignment solutions
-- 📄 Lecture notes and study materials
-- 📤 Secure file uploads
-- 🔍 Search and filtering
-- 👤 User authentication
-- ❤️ Likes and comments
-- ⭐ Bookmarks
-- 📱 Responsive design
+- Past exam repository
+- TPC/assignment solutions
+- Lecture notes and study materials
+- Secure file uploads
+- Search and filtering
+- User authentication
+- Likes and comments
+- Bookmarks
+- Responsive design
 
 ## Tech Stack
 
@@ -35,7 +35,7 @@ UniVault is a modern academic resource-sharing platform designed to help univers
 
 ## Project Status
 
-🚧 Currently under active development.
+ Currently under active development.
 
 ## Roadmap
 
