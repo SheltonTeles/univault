@@ -143,5 +143,3 @@ Database
 
 Storage
 └── Upload folder (first)
-
-
