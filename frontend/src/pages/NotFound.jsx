@@ -1,9 +1,9 @@
-function Home() {
+function NotFound() {
   return (
     <h1 className="text-4xl font-bold">
-      Home
+      NotFound
     </h1>
   );
 }
 
-export default Home;  
+export default NotFound;  
