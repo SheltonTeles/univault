@@ -143,3 +143,15 @@ Database
 
 Storage
 └── Upload folder (first)
+
+
+| Page            | Purpose                                 |
+| --------------- | --------------------------------------- |
+| `Home.jsx`      | Landing page                            |
+| `Resources.jsx` | Browse past exams, notes, TPC solutions |
+| `Upload.jsx`    | Upload study materials                  |
+| `Login.jsx`     | User login                              |
+| `Register.jsx`  | Create an account                       |
+| `Profile.jsx`   | User profile and uploads                |
+| `About.jsx`     | Information about UniVault              |
+| `NotFound.jsx`  | 404 page                                |
