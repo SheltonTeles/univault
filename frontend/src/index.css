@@ -1,1 +1,77 @@
-@import "tailwindcss";
+/* ===========================
+   Global Styles
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #F8FAFC;
+  color: #1E293B;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar {
+  background: #0F172A;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 3rem;
+}
+
+/* Left */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 45px;
+}
+
+/* Center */
+
+.nav-center ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.nav-center a:hover {
+  color: #0F5FEE;
+}
+
+/* Right */
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-right a:hover {
+  color: #0F5FEE;
+}

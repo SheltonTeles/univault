@@ -112,3 +112,15 @@ Search, categories, and community features.
 ## Phase 6
 
 Backend integration and deployment.
+
+
+## Milestone 1 – Application Foundation
+
+### Completed
+- Reorganized project architecture
+- Organized reusable components
+
+### In Progress
+- React Router
+- Layout
+- Navigation
