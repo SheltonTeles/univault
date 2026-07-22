@@ -1,8 +1,20 @@
+import Hero from "../components/home/Hero";
+import Categories from "../components/home/Categories";
+import PopularCourses from "../components/home/PopularCourses";
+import RecentUploads from "../components/home/RecentUploads";
+import HowItWorks from "../components/home/HowItWorks";
+import Footer from "../components/home/Footer";
+
 function Home() {
   return (
-    <h1 className="text-4xl font-bold">
-      Home
-    </h1>
+    <>
+      <Hero />
+      <Categories />
+      <PopularCourses />
+      <RecentUploads />
+      <HowItWorks />
+      <Footer />
+    </>
   );
 }
 
