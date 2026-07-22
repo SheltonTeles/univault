@@ -1,0 +1,42 @@
+.popular-courses {
+
+    padding:4rem 8%;
+
+}
+
+
+.popular-courses h2 {
+
+    text-align:center;
+
+    color:#0F172A;
+
+    font-size:2rem;
+
+    margin-bottom:2.5rem;
+
+}
+
+
+.course-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:1.5rem;
+
+}
+
+
+.course-grid span {
+
+    display:block;
+
+    margin-top:1rem;
+
+    color:#0F5FEE;
+
+    font-weight:600;
+
+}

@@ -1,0 +1,56 @@
+.categories {
+
+    padding:4rem 8%;
+
+}
+
+
+.categories h2 {
+
+    text-align:center;
+
+    color:#0F172A;
+
+    font-size:2rem;
+
+    margin-bottom:2.5rem;
+
+}
+
+
+.category-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+
+    gap:1.5rem;
+
+}
+
+
+.category-icon {
+
+    font-size:2rem;
+
+    margin-bottom:1rem;
+
+}
+
+
+.category-grid h3 {
+
+    color:#0F172A;
+
+    margin-bottom:.5rem;
+
+}
+
+
+.category-grid p {
+
+    color:#475569;
+
+    line-height:1.5;
+
+}
