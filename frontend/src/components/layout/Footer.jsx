@@ -2,9 +2,8 @@ function Footer() {
   return (
     <footer>
       <p>
-        A community platform where students share and discover academic resources.
-      </p>
-      <p>© 2026 UniVault</p>
+        © 2026 UniVault. A community platform where students share and discover academic resources.
+      </p>  
     </footer>
   );
 }

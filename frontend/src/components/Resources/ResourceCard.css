@@ -1,0 +1,37 @@
+.resource-details {
+
+    display:flex;
+
+    gap:1rem;
+
+    margin-top:1rem;
+
+}
+
+
+.resource-details span {
+
+    background:#EFF6FF;
+
+    color:#0F5FEE;
+
+    padding:.3rem .7rem;
+
+    border-radius:20px;
+
+    font-size:.85rem;
+
+}
+
+
+.resource-rating {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:1rem;
+
+    color:#475569;
+
+}
