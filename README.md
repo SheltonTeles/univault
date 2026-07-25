@@ -37,16 +37,7 @@ UniVault is a modern academic resource-sharing platform designed to help univers
 
  Currently under active development.
 
-## Roadmap
 
-- [x] Project setup
-- [x] React + Vite
-- [x] Tailwind CSS
-- [ ] Authentication
-- [ ] File uploads
-- [ ] Search
-- [ ] Community features
-- [ ] AI-powered study assistant
 
 ## License
 
