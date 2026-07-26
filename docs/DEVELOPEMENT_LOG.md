@@ -231,3 +231,13 @@ Remaining:
 - Active navigation styling
 - Homepage UI
 - Design system definition
+
+
+### Completed
+
+- Homepage structure
+- Responsive navigation bar
+- Footer
+- Resource cards
+- Search bar component
+- Dynamic resource search using React state (`useState`)

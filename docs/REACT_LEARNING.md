@@ -44,3 +44,43 @@ Example:
 <BrowserRouter>
    <App />
 </BrowserRouter>
+
+
+# Lesson 4 – React Props and Component Communication
+
+Props allow parent components to pass data and behavior to child components.
+
+Example:
+
+```jsx
+<SearchBar
+    placeholder="Search resources..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+/>
+```
+
+The `SearchBar` component receives these props:
+
+```jsx
+function SearchBar({ value, onChange, placeholder }) {
+```
+
+Props make components reusable because the same component can behave differently depending on the values passed by its parent.
+
+# Lesson 5 – Filtering Lists
+
+React can dynamically display data by filtering arrays.
+
+Example:
+
+```jsx
+const filteredResources = resources.filter(resource =>
+    resource.title.toLowerCase().includes(search.toLowerCase()) ||
+    resource.course.toLowerCase().includes(search.toLowerCase())
+);
+```
+
+Instead of modifying the HTML directly, React re-renders the UI whenever the state changes.
+
+This demonstrates React's declarative programming model.
