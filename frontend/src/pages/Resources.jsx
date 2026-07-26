@@ -1,10 +1,11 @@
 import SearchBar from "../components/ui/SearchBar";
 import ResourceCard from "../components/resources/ResourceCard";
 import "./Resources.css";
-
+import { useState } from "react";
 
 function Resources() {
 
+  const [search, setSearch] = useState("");
 
   const resources = [
     {
@@ -26,12 +27,18 @@ function Resources() {
     {
       title: "Algorithms TPC Solution",
       course: "Algorithms",
-      type: "TPC",
+      type: "Homework",
       year: "2025",
       rating: 4.9,
       comments: 20
     }
   ];
+
+
+  const filteredResources = resources.filter((resource) =>
+  resource.title.toLowerCase().includes(search.toLowerCase()) ||
+  resource.course.toLowerCase().includes(search.toLowerCase())
+);
 
 
   return (
@@ -47,12 +54,16 @@ function Resources() {
       </p>
 
 
-      <SearchBar />
+      <SearchBar
+        placeholder="Search resources..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
 
 
       <div className="resources-grid">
 
-        {resources.map((resource) => (
+        {filteredResources.map((resource) => (
 
           <ResourceCard
             key={resource.title}
