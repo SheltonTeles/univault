@@ -1,0 +1,17 @@
+.resources-page {
+  padding: 2rem 3rem;
+}
+
+.resources-page h1 {
+  margin-bottom: 0.5rem;
+}
+
+.resources-page p {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .resources-page {
+    padding: 1.5rem 1rem;
+  }
+}

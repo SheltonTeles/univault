@@ -12,9 +12,9 @@ function RecentUploads() {
       year: "2025"
     },
     {
-      title: "Database TPC Solution",
+      title: "Database Homework Solution",
       course: "Database Systems",
-      type: "TPC Solution",
+      type: "Homework Solution",
       year: "2026"
     },
     {

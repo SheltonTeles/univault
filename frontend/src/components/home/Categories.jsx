@@ -11,7 +11,7 @@ function Categories() {
     },
     {
       icon: "📝",
-      title: "TPC Solutions",
+      title: "Homework Solutions",
       description: "Find solutions and explanations for assignments."
     },
     {

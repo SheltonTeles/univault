@@ -11,7 +11,7 @@ function Hero() {
           <span> in one place</span>
         </h1>
         <p>
-          Past exams, TPC solutions, lecture notes and slides —
+          Past exams, homework solutions, lecture notes and slides —
           organized by course, professor and academic year.
         </p>
 
