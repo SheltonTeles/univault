@@ -4,12 +4,13 @@ import CategoryFilter from "../components/resources/CategoryFilter";
 import "./Resources.css";
 import { useState } from "react";
 import resources from "../data/resources";
+import SortSelect from "../components/resources/SortSelect";
 
 function Resources() {
 
   const [search, setSearch] = useState("");
-
   const [category, setCategory] = useState("All");
+  const[sortBy, setSortBy] = useState("newest");
 
 
 const filteredResources = resources.filter((resource) => {
@@ -21,6 +22,22 @@ const filteredResources = resources.filter((resource) => {
     category === "All" || resource.type === category;
 
   return matchesSearch && matchesCategory;
+});
+
+const sortedResources = [...filteredResources].sort((a,b)=>{
+  if(sortBy === "newest"){
+    return Number(b.year) - Number(a.year);
+  }
+
+  if(sortBy === "rating"){
+    return b.rating - a.rating;
+  }
+
+  if(sortBy === "comments"){
+    return b.comments - a.comments;
+  }
+
+  return 0;
 });
 
 
@@ -48,12 +65,16 @@ const filteredResources = resources.filter((resource) => {
         setCategory={setCategory}
       />
 
+      <SortSelect
+        sortBy={sortBy}
+        setSortBy={setSortBy}
+      />
       <div className="resources-grid">
 
-        {filteredResources.map((resource) => (
+        {sortedResources.map((resource) => (
 
           <ResourceCard
-            key={resource.title}
+            key={resource.id}
             resource={resource}
           />
 
