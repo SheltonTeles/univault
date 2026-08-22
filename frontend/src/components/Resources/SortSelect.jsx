@@ -1,3 +1,4 @@
+import "./SortSelect.css";
 function SortSelect({sortBy, setSortBy }){
     return (
         <div className="sort-select">
