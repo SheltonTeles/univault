@@ -28,10 +28,34 @@
 
     display:flex;
 
-    justify-content:space-between;
+    align-items:center;
 
     margin-top:1rem;
 
+    gap: 1rem;
+
     color:#475569;
 
+}
+
+.view-resource-button {
+  display: block;
+  margin: 1.25rem 0 0 auto;
+  padding: 0.6rem 1rem;
+
+  background: #0f5fee;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.view-resource-button:hover {
+  background: #2563eb;
 }

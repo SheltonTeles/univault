@@ -10,8 +10,18 @@
   margin-bottom: 1.5rem;
 }
 
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
 @media (max-width: 768px) {
   .resources-page {
     padding: 1.5rem 1rem;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
   }
 }
