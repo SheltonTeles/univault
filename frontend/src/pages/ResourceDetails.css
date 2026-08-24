@@ -1,0 +1,74 @@
+.resource-details-page{
+    padding: 2rem 3rem;
+}
+
+.back-button{
+    background:none;
+    border: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    color: #0f5fee;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.resource-details-page h1 {
+  margin-bottom: 0.5rem;
+}
+
+.resource-course {
+  color: #475569;
+}
+
+.resource-meta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.resource-meta span {
+  background: #eff6ff;
+  color: #0f5fee;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.resource-uploader {
+  margin-top: 1rem;
+  color: #64748b;
+}
+
+.resource-preview {
+  margin-top: 2.5rem;
+}
+
+.preview-placeholder {
+  min-height: 300px;
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  color: #64748b;
+}
+
+.download-button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.1rem;
+
+  background: #0f5fee;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+

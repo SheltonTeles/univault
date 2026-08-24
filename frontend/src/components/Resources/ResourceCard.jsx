@@ -1,7 +1,9 @@
 import Card from "../ui/Card";
 import "./ResourceCard.css";
-
+import { useNavigate } from "react-router-dom";
 function ResourceCard({ resource }) {
+
+  const navigate = useNavigate();
   return (
     <Card>
 
@@ -35,7 +37,7 @@ function ResourceCard({ resource }) {
 
       </div>
 
-      <button className="view-resource-button">
+      <button className="view-resource-button" onClick={() => navigate(`/resources/${resource.id}`)}>
         View Resource
       </button>
 

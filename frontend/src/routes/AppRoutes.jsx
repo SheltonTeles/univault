@@ -11,6 +11,8 @@ import Profile from "../pages/Profile";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
 
+import ResourceDetails from "../pages/ResourceDetails"; 
+
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -23,6 +25,7 @@ function AppRoutes() {
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/about" element={<About />} />
+          <Route path="/resources/:id" element={<ResourceDetails />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
