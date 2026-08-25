@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import resources from "../data/resources";
+import Comments from "../components/resources/Comments";
 import "./ResourceDetails.css";
 
 function ResourceDetails (){
@@ -33,6 +34,10 @@ function ResourceDetails (){
                 Uploaded by Shelton
             </p>
 
+            <p className="resource-file">
+                📄 {resource.fileName}
+            </p>
+            
             <section className="resource-preview">
                 <h2>Resource preview</h2>
 
@@ -44,6 +49,7 @@ function ResourceDetails (){
                     Download Resource
                 </button>
             </section>
+            <Comments resourceId = {resource.id} />
         </main>
     );
 }
