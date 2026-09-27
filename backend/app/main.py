@@ -32,7 +32,7 @@ def get_resources():
             "id": 2,
             "title": "Database Lecture Notes",
             "course": "Database Systems",
-            "type": "Notes",
+            "type": "Lecture Notes",
             "year": "2026",
             "rating": 4.5,
             "comments": 8
@@ -40,9 +40,9 @@ def get_resources():
 
         {
             "id": 3,
-            "title": "Algorithms TPC Solution",
+            "title": "Algorithms Homework Solution",
             "course": "Algorithms",
-            "type": "TPC",
+            "type": "Homework",
             "year": "2025",
             "rating": 4.9,
             "comments": 20
