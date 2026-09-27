@@ -2,43 +2,55 @@ import SearchBar from "../components/ui/SearchBar";
 import ResourceCard from "../components/resources/ResourceCard";
 import CategoryFilter from "../components/resources/CategoryFilter";
 import "./Resources.css";
-import { useState } from "react";
-import resources from "../data/resources";
+import { useEffect, useState } from "react";
 import SortSelect from "../components/resources/SortSelect";
+import { getResources } from "../services/api";
+
 
 function Resources() {
 
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
-  const[sortBy, setSortBy] = useState("newest");
+  const [sortBy, setSortBy] = useState("newest");
+  const [resources, setResources] = useState([]);
+
+  useEffect(() => {
+    getResources()
+      .then((data) => {
+        setResources(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
 
-const filteredResources = resources.filter((resource) => {
-  const matchesSearch =
-    resource.title.toLowerCase().includes(search.toLowerCase()) ||
-    resource.course.toLowerCase().includes(search.toLowerCase());
+  const filteredResources = resources.filter((resource) => {
+    const matchesSearch =
+      resource.title.toLowerCase().includes(search.toLowerCase()) ||
+      resource.course.toLowerCase().includes(search.toLowerCase());
 
-  const matchesCategory =
-    category === "All" || resource.type === category;
+    const matchesCategory =
+      category === "All" || resource.type === category;
 
-  return matchesSearch && matchesCategory;
-});
+    return matchesSearch && matchesCategory;
+  });
 
-const sortedResources = [...filteredResources].sort((a,b)=>{
-  if(sortBy === "newest"){
-    return Number(b.year) - Number(a.year);
-  }
+  const sortedResources = [...filteredResources].sort((a, b) => {
+    if (sortBy === "newest") {
+      return Number(b.year) - Number(a.year);
+    }
 
-  if(sortBy === "rating"){
-    return b.rating - a.rating;
-  }
+    if (sortBy === "rating") {
+      return b.rating - a.rating;
+    }
 
-  if(sortBy === "comments"){
-    return b.comments - a.comments;
-  }
+    if (sortBy === "comments") {
+      return b.comments - a.comments;
+    }
 
-  return 0;
-});
+    return 0;
+  });
 
 
   return (
@@ -60,7 +72,7 @@ const sortedResources = [...filteredResources].sort((a,b)=>{
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      <CategoryFilter 
+      <CategoryFilter
         category={category}
         setCategory={setCategory}
       />
