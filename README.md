@@ -7,7 +7,7 @@ UniVault is a modern academic resource-sharing platform designed to help univers
 ## Features
 
 - Past exam repository
-- TPC/assignment solutions
+- Homework/assignment solutions
 - Lecture notes and study materials
 - Secure file uploads
 - Search and filtering
