@@ -1,7 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from .database import engine, Base, SessionLocal
+from . import models
+from .schemas import ResourceResponse, ResourceCreate
 
 app = FastAPI()
+
+Base.metadata.create_all(bind=engine)
 
 app.add_middleware(
     CORSMiddleware,
@@ -15,36 +20,32 @@ app.add_middleware(
 def health_check():
     return {"status": "ok"}
 
-@app.get("/api/resources")
+@app.get("/api/resources", response_model=list[ResourceResponse])
 def get_resources():
-    return [
-        {
-            "id": 1,
-            "title": "Data Structures Final Exam",
-            "course": "Computer Science",
-            "type": "Exam",
-            "year": "2025",
-            "rating": 4.8,
-            "comments": 12
-        },
+    db = SessionLocal()
 
-        {
-            "id": 2,
-            "title": "Database Lecture Notes",
-            "course": "Database Systems",
-            "type": "Lecture Notes",
-            "year": "2026",
-            "rating": 4.5,
-            "comments": 8
-        },
+    resources = db.query(models.Resource).all()
 
-        {
-            "id": 3,
-            "title": "Algorithms Homework Solution",
-            "course": "Algorithms",
-            "type": "Homework",
-            "year": "2025",
-            "rating": 4.9,
-            "comments": 20
-        }
-    ]
+    db.close()
+
+    return resources
+
+
+@app.post("/api/resources", response_model=ResourceResponse)
+def create_resource(resource: ResourceCreate):
+    db = SessionLocal()
+
+    new_resource = models.Resource(
+        title=resource.title,
+        course=resource.course,
+        type=resource.type,
+        year=resource.year
+    )
+
+    db.add(new_resource)
+    db.commit()
+    db.refresh(new_resource)
+
+    db.close()
+
+    return new_resource
