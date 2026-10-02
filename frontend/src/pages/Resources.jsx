@@ -1,3 +1,4 @@
+import AddResourceForm from "../components/resources/AddResourceForm";
 import SearchBar from "../components/ui/SearchBar";
 import ResourceCard from "../components/resources/ResourceCard";
 import CategoryFilter from "../components/resources/CategoryFilter";
@@ -60,11 +61,11 @@ function Resources() {
         Resources
       </h1>
 
-
       <p>
         Discover study materials shared by students.
       </p>
 
+      <AddResourceForm/>
 
       <SearchBar
         placeholder="Search resources..."

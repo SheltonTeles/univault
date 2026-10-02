@@ -9,3 +9,19 @@ export async function getResources() {
 
   return response.json();
 }
+
+export async function createResource(resource) {
+  const response = await fetch(`${API_URL}/api/resources`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(resource),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to create resource");
+  }
+
+  return response.json();
+}
